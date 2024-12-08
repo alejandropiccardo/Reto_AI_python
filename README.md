@@ -6,7 +6,6 @@ En el marco del reto UNICEF "ni silencio ni tabú" el proyecto es crear un bot d
 1. Clonar repo
 2. Descargar dependencias
 3. Se deberá crear un archivo .env con :
-    path2data=data.pdf
     APIKEY=<tu apikey>
 3. Ejecutar  ->  uvicorn main:app --reload
 4. En el navegador ir a localhost:8000/docs  #donde podrás ver el swagger

@@ -27,8 +27,6 @@ qa_chain = RetrievalQA.from_chain_type(
     retriever=retriever,
 )
 
-
-
 # Hacer una consulta
 def responseFromBot(msg:str):
     query = msg

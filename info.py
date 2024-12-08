@@ -2,7 +2,7 @@ import chromadb
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
 import os
-import pdfFile
+#import pdfFile
 
 load_dotenv()
 openai_api_key = os.getenv("APIKEY")
@@ -10,7 +10,7 @@ openai_api_key = os.getenv("APIKEY")
 # Configurar cliente ChromaDB
 chroma_client = chromadb.Client()
 
-# Crear función de embeddings personalizada
+# Crear función de embeddings personalizada // Esto fue necesario a la diff de dimensiones entre los embedding generados automaticamente y los utilizados por openai
 class CustomEmbeddingFunction:
     def __init__(self, embedding_model):
         self.embedding_model = embedding_model
@@ -44,5 +44,5 @@ for i, fragmento in enumerate(fragmentos):
     )
 
 # Inspeccionar contenido
-contenido = collection.get()
-print("Contenido de la colección:", contenido)
+#contenido = collection.get()
+#print("Contenido de la colección:", contenido)
