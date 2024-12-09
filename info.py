@@ -2,7 +2,7 @@ import chromadb
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
 import os
-#import pdfFile
+import pdfFile
 
 load_dotenv()
 openai_api_key = os.getenv("APIKEY")
@@ -33,7 +33,7 @@ collection = chroma_client.create_collection(
 )
 
 # Simular texto para agregar
-texto = "este es un documento para concientizar sobre mental health y todos sus aspectos relacionados, recomendaciones, estudios"#pdfFile.extraer_texto_pdf("mentalHealth.pdf")
+texto = pdfFile.extraer_texto_pdf("mentalHealth.pdf")#"este es un documento para concientizar sobre mental health y todos sus aspectos relacionados, recomendaciones, estudios"#
 fragmentos = [texto[i:i + 500] for i in range(0, len(texto), 500)]  # Fragmentos de 500 caracteres
 
 # Agregar contenido extraído a la colección
@@ -44,5 +44,5 @@ for i, fragmento in enumerate(fragmentos):
     )
 
 # Inspeccionar contenido
-#contenido = collection.get()
-#print("Contenido de la colección:", contenido)
+contenido = collection.get()
+print("Contenido de la colección:", contenido)

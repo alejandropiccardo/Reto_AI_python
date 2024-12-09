@@ -15,6 +15,7 @@ En el marco del reto UNICEF "ni silencio ni tabú" el proyecto es crear un bot d
 
 ![alt text](/img/image.png)
 ![alt text](/img/image2.png)
+![alt text](/img/image3.png)
 
 
 # notas:
